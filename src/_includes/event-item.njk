@@ -1,0 +1,19 @@
+<li class="event" data-event-date="{{ ev.date | isoDate }}">
+  <div class="event-date" aria-hidden="true">
+    <span class="event-month">{{ ev.date | shortMonth }}</span>
+    <span class="event-day">{{ ev.date | dayNum }}</span>
+  </div>
+  <div>
+    <p class="event-title">{{ ev.data.title }}</p>
+    <p class="event-meta">
+      <span class="sr-only">{{ ev.date | readableDate }}, </span>{{ ev.date | weekday }}{% if ev.data.time %} · {{ ev.data.time }}{% endif %}{% if ev.data.location %}<br>{{ ev.data.location }}{% endif %}
+    </p>
+    {% if ev.content | striptags | trim %}<div class="event-notes">{{ ev.content | safe }}</div>{% endif %}
+    {% if ev.data.flyer or ev.data.link_url %}
+    <p class="event-links">
+      {% if ev.data.flyer %}<a href="{{ ev.data.flyer }}">Flyer</a>{% endif %}
+      {% if ev.data.link_url %}<a href="{{ ev.data.link_url }}">{{ ev.data.link_label or "More info" }}</a>{% endif %}
+    </p>
+    {% endif %}
+  </div>
+</li>

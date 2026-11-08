@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+title: Contribute
+permalink: /contribute/
+---
+<h1>Contribute to Area 56</h1>
+<p class="lede">Group and individual contributions support the work of Area 56 in carrying the message. Thank you for your Seventh Tradition support.</p>
+
+<div class="two-col">
+  <section class="panel">
+    <h2>By mail</h2>
+    <p>Make checks payable to <strong>{{ site.checks_payable_to }}</strong> and mail to:</p>
+    <p class="address">{{ site.mailing_address }}</p>
+    <p>Please include your group name and G.S.O. service number (if you know it) so your group's contribution can be recorded.</p>
+  </section>
+  <section class="panel">
+    <h2>Online</h2>
+    {% if site.online_contribution_url %}
+    <p>You can contribute online as a group or an individual.</p>
+    <p><a class="button" href="{{ site.online_contribution_url }}">Contribute online</a></p>
+    {% else %}
+    <p>Online contributions aren't set up on this site yet. Please contribute by mail for now.</p>
+    {% endif %}
+  </section>
+</div>
+
+<p class="small">Also consider contributing to the <a href="https://www.aa.org/contribute">General Service Office</a> and to your district and local intergroup.</p>

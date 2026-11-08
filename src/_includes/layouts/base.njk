@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ site.tagline }}">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/">
+        <span class="brand-mark">56</span>
+        <span class="brand-text">
+          <span class="brand-name">Area 56</span>
+          <span class="brand-sub">Southwest Ohio General Service</span>
+        </span>
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav">
+          {%- set links = [
+            ["/get-help/", "Get help"],
+            ["/events/", "Events"],
+            ["/delegates-corner/", "Delegate's Corner"],
+            ["/documents/", "Documents"],
+            ["/trusted-servants/", "Trusted servants"],
+            ["/contribute/", "Contribute"],
+            ["/contact/", "Contact"]
+          ] %}
+          {%- for link in links %}
+          <li><a href="{{ link[0] }}"{% if page.url.startsWith(link[0]) %} aria-current="page"{% endif %}>{{ link[1] }}</a></li>
+          {%- endfor %}
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <p class="footer-title">{{ site.title }}</p>
+        <p class="address">{{ site.mailing_address }}</p>
+      </div>
+      <div class="footer-links">
+        <a href="/mini-conference/">Mini-Conference</a>
+        <a href="/announcements/">All announcements</a>
+        <a href="https://www.aa.org">Alcoholics Anonymous (aa.org)</a>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/upcoming.js"></script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+# Pages CMS configuration — https://pagescms.org/docs/configuration/
+# Each entry under `content` becomes one item in the editor's sidebar.
+# Editors only ever see these forms; layout and design live in src/_includes.
+
+media:
+  - name: images
+    label: Images and flyers
+    input: src/uploads/images
+    output: /uploads/images
+    categories: [image]
+    rename: safe
+  - name: files
+    label: PDFs and documents
+    input: src/uploads/files
+    output: /uploads/files
+    categories: [document, spreadsheet]
+    rename: safe
+
+content:
+  - name: announcements
+    label: Announcements
+    description: Flyers and news for the home page. The newest four appear on the home page.
+    type: collection
+    path: src/announcements
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, date]
+      primary: title
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date posted
+        type: date
+        required: true
+      - name: flyer
+        label: Flyer image
+        description: Upload the flyer as a PNG or JPG. If you only have a PDF, add it under Documents instead and link to it below.
+        type: image
+        options:
+          media: images
+      - name: flyer_description
+        label: Describe the flyer in one sentence
+        description: Read aloud by screen readers for people who can't see the image. Include the event name, date, and place.
+        type: string
+      - name: link_url
+        label: Button link (optional)
+        description: For example, a registration form or a PDF.
+        type: string
+      - name: link_label
+        label: Button text (optional)
+        type: string
+      - name: body
+        label: Message (optional)
+        type: rich-text
+
+  - name: delegates_corner
+    label: Delegate's Corner
+    description: The Delegate's monthly letter. Upload the PDF and pick the month.
+    type: collection
+    path: src/delegates-corner
+    filename: "{year}-{month}-{primary}.md"
+    view:
+      fields: [title, date]
+      primary: title
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title of this month's letter
+        type: string
+        required: true
+      - name: date
+        label: Month
+        description: Pick any day in the month the letter is for.
+        type: date
+        required: true
+      - name: pdf
+        label: Letter (PDF)
+        type: file
+        required: true
+        options:
+          media: files
+      - name: image
+        label: Picture (optional)
+        type: image
+        options:
+          media: images
+      - name: body
+        label: Short introduction (optional)
+        type: rich-text
+
+  - name: events
+    label: Events
+    description: Past events disappear from the site automatically.
+    type: collection
+    path: src/events
+    filename: "{fields.date}-{primary}.md"
+    view:
+      fields: [title, date]
+      primary: title
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Event name
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: time
+        label: Time
+        description: "For example: 12:00 – 2:00 PM"
+        type: string
+      - name: location
+        label: Location
+        description: "For Area meetings, usually: St. John's Lutheran Church, 470 S. Gebhart Church Rd., Miamisburg"
+        type: string
+      - name: flyer
+        label: Flyer (optional)
+        type: image
+        options:
+          media: images
+      - name: link_url
+        label: Link (optional)
+        type: string
+      - name: link_label
+        label: Link text (optional)
+        type: string
+      - name: body
+        label: Notes (optional)
+        type: rich-text
+
+  - name: documents
+    label: Documents
+    description: Minutes, reports, forms, policies, and service literature.
+    type: collection
+    path: src/documents
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, category, date]
+      primary: title
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: category
+        label: Category
+        type: select
+        required: true
+        options:
+          values: [Minutes, Reports, Forms, Policies and guidelines, Service literature]
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: show_date
+        label: Show the date on the site
+        type: boolean
+        default: true
+      - name: file
+        label: Upload a file
+        type: file
+        options:
+          media: files
+      - name: link_url
+        label: …or link to a document elsewhere
+        description: Use this instead of an upload for documents on aa.org.
+        type: string
+      - name: body
+        label: Short description (optional)
+        type: rich-text
+
+  - name: mini_conference
+    label: Mini-Conference
+    description: One entry per year.
+    type: collection
+    path: src/mini-conference
+    filename: "{primary}.md"
+    view:
+      fields: [title, year]
+      primary: title
+    fields:
+      - name: title
+        label: Title
+        description: "For example: 44th Annual Area 56 Mini-Conference"
+        type: string
+        required: true
+      - name: year
+        label: Year
+        type: number
+        required: true
+      - name: date
+        label: First day
+        type: date
+        required: true
+      - name: dates
+        label: Dates as they should appear
+        description: "For example: March 13–15, 2027"
+        type: string
+      - name: location
+        label: Location
+        type: string
+      - name: flyer
+        label: Flyer
+        type: image
+        options:
+          media: images
+      - name: registration_url
+        label: Online registration link
+        type: string
+      - name: files
+        label: Documents
+        type: object
+        list: true
+        fields:
+          - name: label
+            label: Name
+            type: string
+          - name: url
+            label: File
+            type: file
+            options:
+              media: files
+      - name: body
+        label: Details
+        type: rich-text
+
+  - name: servants
+    label: Trusted servants
+    description: Names and email addresses on the Trusted Servants page.
+    type: file
+    path: src/_data/servants.json
+    format: json
+    fields:
+      - name: panel
+        label: Panel number
+        type: string
+      - name: groups
+        label: Groups
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Group name
+            type: string
+          - name: members
+            label: Positions
+            type: object
+            list: true
+            fields:
+              - name: role
+                label: Position
+                type: string
+              - name: name
+                label: Name (first name and last initial)
+                description: Leave blank if the position is open.
+                type: string
+              - name: email
+                label: Position email
+                type: string
+
+  - name: pages
+    label: Pages
+    description: Simple text pages such as Get help.
+    type: collection
+    path: src/pages
+    filename: "{primary}.md"
+    view:
+      fields: [title]
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: body
+        label: Text
+        type: rich-text
+
+  - name: site
+    label: Site settings
+    description: Mailing address, contribution details, and help links.
+    type: file
+    path: src/_data/site.json
+    format: json
+    fields:
+      - name: title
+        label: Site name
+        type: string
+      - name: short_title
+        label: Short name
+        type: string
+      - name: tagline
+        label: Tagline
+        type: text
+      - name: mailing_address
+        label: Mailing address
+        type: text
+      - name: checks_payable_to
+        label: Checks payable to
+        type: string
+      - name: online_contribution_url
+        label: Online contribution link
+        description: Leave blank to hide the online option.
+        type: string
+      - name: contact_form_recipient
+        label: Contact form goes to
+        type: string
+      - name: meeting_place
+        label: Usual Area meeting place
+        type: string
+      - name: help_links
+        label: Get-help links on the home page
+        type: object
+        list: true
+        fields:
+          - name: label
+            type: string
+          - name: description
+            type: string
+          - name: url
+            type: string

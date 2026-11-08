@@ -1,0 +1,32 @@
+{
+  "title": "Southwest Ohio General Service Area 56",
+  "short_title": "Area 56",
+  "tagline": "Connecting Southwest Ohio Alcoholics Anonymous groups to A.A. as a whole and to the wider community",
+  "mailing_address": "SWO General Service Area 56\nP.O. Box 684\nDayton, OH 45401-0684",
+  "checks_payable_to": "SWO Area 56 General Fund",
+  "online_contribution_url": "",
+  "contact_form_recipient": "Area Chair",
+  "meeting_place": "St. John's Lutheran Church, 470 S. Gebhart Church Rd., Miamisburg, OH",
+  "help_links": [
+    {
+      "label": "Get help near Cincinnati",
+      "description": "Local meetings and services, including a phone line",
+      "url": "https://aacincinnati.org"
+    },
+    {
+      "label": "Get help near Dayton",
+      "description": "Local meetings and services, including a phone line",
+      "url": "https://aadaytononline.org"
+    },
+    {
+      "label": "Meeting Guide app",
+      "description": "Find an A.A. meeting on your phone",
+      "url": "https://www.aa.org/meeting-guide-app"
+    },
+    {
+      "label": "Online meetings",
+      "description": "A.A. meetings online, any time of day",
+      "url": "https://aa-intergroup.org"
+    }
+  ]
+}

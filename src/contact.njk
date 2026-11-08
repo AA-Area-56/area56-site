@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+title: Contact
+permalink: /contact/
+---
+<h1>Contact Area 56</h1>
+<div class="two-col">
+  <section class="panel">
+    <h2>Send a message</h2>
+    <p>Messages go to the {{ site.contact_form_recipient }}. To reach a specific trusted servant, see the <a href="/trusted-servants/">trusted servants list</a>.</p>
+    <form name="contact" method="POST" action="/contact/thanks/" data-netlify="true" netlify-honeypot="company" class="form">
+      <p hidden><label>Leave this empty <input name="company"></label></p>
+      <label>Your name <input name="name" autocomplete="name" required></label>
+      <label>Your email <input type="email" name="email" autocomplete="email" required></label>
+      <label>Message <textarea name="message" rows="6" required></textarea></label>
+      <button type="submit" class="button">Send message</button>
+    </form>
+  </section>
+  <section class="panel">
+    <h2>By mail</h2>
+    <p class="address">{{ site.mailing_address }}</p>
+    <h2>Looking for a meeting?</h2>
+    <p>See <a href="/get-help/">Get help</a> for local meeting lists and phone lines.</p>
+  </section>
+</div>

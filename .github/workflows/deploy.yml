@@ -1,0 +1,49 @@
+# Builds the site with Eleventy and publishes it to GitHub Pages.
+# Runs on every push to main (each Pages CMS save is a push), and every night
+# so "upcoming" lists stay current even when nobody edits anything.
+# (The site also hides past events in the browser.)
+#
+# Setup: repo Settings → Pages → Source: "GitHub Actions",
+# then set the custom domain to aaarea56.org and turn on "Enforce HTTPS".
+name: Build and deploy
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 9 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

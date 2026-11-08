@@ -1,0 +1,11 @@
+---
+layout: layouts/base.njk
+title: Events
+permalink: /events/
+---
+<h1>Events</h1>
+<p class="lede">Area 56 committee meetings and assemblies are held at {{ site.meeting_place }} unless noted. Intergroup meetings are listed so groups can plan around them.</p>
+<ul class="events events-full" data-upcoming>
+  {%- for ev in collections.events %}{% include "event-item.njk" %}{% endfor %}
+</ul>
+<p class="empty" hidden>No upcoming events are posted right now.</p>

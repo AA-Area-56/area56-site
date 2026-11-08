@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+---
+<article class="post">
+  <p class="eyebrow"><a href="/mini-conference/">Mini-Conference</a> · {{ year }}</p>
+  <h1>{{ title }}</h1>
+  {% if dates or location %}<p class="lede">{{ dates }}{% if dates and location %} · {% endif %}{{ location }}</p>{% endif %}
+  <div class="dc-detail">
+    {% if flyer %}<img class="dc-image" src="{{ flyer }}" alt="{{ 'Flyer: ' + title }}">{% endif %}
+    <div>
+      {% if registration_url %}<p><a class="button" href="{{ registration_url }}">Register online</a></p>{% endif %}
+      <div class="prose">{{ content | safe }}</div>
+      {% if files and files.length %}
+      <h2>Documents</h2>
+      <ul class="doc-list">
+        {% for f in files %}<li><a href="{{ f.url }}">{{ f.label }}</a></li>{% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </div>
+</article>

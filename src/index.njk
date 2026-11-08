@@ -1,0 +1,63 @@
+---
+layout: layouts/base.njk
+---
+<section class="hero">
+  <h1>{{ site.title }}</h1>
+  <p class="lede">{{ site.tagline }}</p>
+</section>
+
+<section class="help-band" aria-labelledby="help-heading">
+  <h2 id="help-heading">Need help with drinking?</h2>
+  <ul class="help-grid">
+    {%- for h in site.help_links %}
+    <li><a class="help-card" href="{{ h.url }}"><span class="help-label">{{ h.label }}</span><span class="help-desc">{{ h.description }}</span></a></li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<div class="home-grid">
+  <section aria-labelledby="ann-heading">
+    <div class="section-head">
+      <h2 id="ann-heading">Announcements</h2>
+      <a href="/announcements/">See all</a>
+    </div>
+    <ul class="card-grid">
+      {%- for post in collections.announcements | limit(4) %}
+      <li class="card">
+        <a href="{{ post.url }}">
+          {% if post.data.flyer %}<img src="{{ post.data.flyer }}" alt="{{ post.data.flyer_description or ('Flyer: ' + post.data.title) }}" loading="lazy">{% endif %}
+          <span class="card-title">{{ post.data.title }}</span>
+          <span class="card-meta">{{ post.date | readableDate }}</span>
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+
+    {% set dc = collections.delegatesCorner[0] %}
+    {% if dc %}
+    <div class="section-head">
+      <h2>Delegate's Corner</h2>
+      <a href="/delegates-corner/">Past letters</a>
+    </div>
+    <a class="dc-feature" href="{{ dc.url }}">
+      {% if dc.data.image %}<img src="{{ dc.data.image }}" alt="" loading="lazy">{% endif %}
+      <span>
+        <span class="card-meta">{{ dc.date | monthYear }}</span>
+        <span class="card-title">{{ dc.data.title }}</span>
+        <span class="card-desc">A monthly letter from our Delegate to the groups of Area 56.</span>
+      </span>
+    </a>
+    {% endif %}
+  </section>
+
+  <aside aria-labelledby="events-heading">
+    <div class="section-head">
+      <h2 id="events-heading">Upcoming events</h2>
+      <a href="/events/">Calendar</a>
+    </div>
+    <ul class="events" data-upcoming data-limit="5">
+      {%- for ev in collections.events %}{% include "event-item.njk" %}{% endfor %}
+    </ul>
+    <p class="empty" hidden>No upcoming events are posted right now.</p>
+  </aside>
+</div>

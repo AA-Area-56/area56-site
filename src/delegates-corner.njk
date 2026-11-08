@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+title: Delegate's Corner
+permalink: /delegates-corner/
+---
+<h1>Delegate's Corner</h1>
+<p class="lede">Each month our Delegate writes to the groups of Area 56 about what's happening in general service.</p>
+<ul class="dc-list">
+  {%- for dc in collections.delegatesCorner %}
+  <li>
+    <a href="{{ dc.url }}">
+      <span class="dc-month">{{ dc.date | monthYear }}</span>
+      <span class="dc-title">{{ dc.data.title }}</span>
+    </a>
+    {% if dc.data.pdf %}<a class="dc-pdf" href="{{ dc.data.pdf }}">PDF</a>{% endif %}
+  </li>
+  {%- endfor %}
+</ul>

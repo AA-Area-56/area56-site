@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+title: Trusted servants
+permalink: /trusted-servants/
+---
+<h1>Area 56 trusted servants</h1>
+<p class="lede">Panel {{ servants.panel }}. Each position has its own email address, which passes to the next person at rotation.</p>
+{% for group in servants.groups %}
+<section class="servant-section">
+  <h2>{{ group.name }}</h2>
+  <ul class="servant-list">
+    {% for m in group.members %}
+    <li>
+      <span class="servant-role">{{ m.role }}</span>
+      <span class="servant-name">{% if m.name %}{{ m.name }}{% else %}<em>Open</em>{% endif %}</span>
+      <a class="servant-email" href="mailto:{{ m.email }}">{{ m.email | lower }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endfor %}

@@ -1,0 +1,17 @@
+---
+layout: layouts/base.njk
+title: Announcements
+permalink: /announcements/
+---
+<h1>Announcements</h1>
+<ul class="card-grid">
+  {%- for post in collections.announcements %}
+  <li class="card">
+    <a href="{{ post.url }}">
+      {% if post.data.flyer %}<img src="{{ post.data.flyer }}" alt="{{ post.data.flyer_description or ('Flyer: ' + post.data.title) }}" loading="lazy">{% endif %}
+      <span class="card-title">{{ post.data.title }}</span>
+      <span class="card-meta">{{ post.date | readableDate }}</span>
+    </a>
+  </li>
+  {%- endfor %}
+</ul>

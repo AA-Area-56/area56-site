@@ -1,0 +1,4 @@
+{
+  "layout": "layouts/conference.njk",
+  "permalink": "/mini-conference/{{ page.fileSlug }}/"
+}

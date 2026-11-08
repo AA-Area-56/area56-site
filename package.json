@@ -1,0 +1,16 @@
+{
+  "name": "area56-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Website for Southwest Ohio General Service Area 56",
+  "type": "module",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "migrate": "node scripts/migrate-from-wordpress.mjs"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.8",
+    "turndown": "^7.2.5"
+  }
+}

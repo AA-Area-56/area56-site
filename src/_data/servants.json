@@ -1,0 +1,63 @@
+{
+  "panel": "76",
+  "groups": [
+    {
+      "name": "Officers",
+      "members": [
+        { "role": "Delegate", "name": "Tim C", "email": "Delegate@aaarea56.org" },
+        { "role": "Area Chair / Alternate Delegate", "name": "George N", "email": "Areachair@aaarea56.org" },
+        { "role": "Registrar", "name": "Brenda B", "email": "Registrar@aaarea56.org" },
+        { "role": "Treasurer", "name": "Angie S", "email": "Treasurer@aaarea56.org" },
+        { "role": "Recording Secretary", "name": "Chris N", "email": "Secretary@aaarea56.org" }
+      ]
+    },
+    {
+      "name": "Liaisons",
+      "members": [
+        { "role": "Dayton Intergroup", "name": "Jenace Y", "email": "dayton.intergroup@aaarea56.org" },
+        { "role": "Cincinnati Intergroup", "name": "Suzanne C", "email": "cin.intergroup@aaarea56.org" },
+        { "role": "Spanish-Speaking Community", "name": "Roberto C", "email": "spanish.liaison@aaarea56.org" }
+      ]
+    },
+    {
+      "name": "Committee chairs",
+      "members": [
+        { "role": "Literature", "name": "Bethany W", "email": "Literature@aaarea56.org" },
+        { "role": "Grapevine / La Viña", "name": "Katie D", "email": "Grapevine@aaarea56.org" },
+        { "role": "PI/CPC", "name": "Steve B", "email": "PI.CPC@aaarea56.org" },
+        { "role": "Corrections", "name": "Brad B", "email": "Corrections@aaarea56.org" },
+        { "role": "Treatment / Accessibilities", "name": "Sean F", "email": "Treat.Access@aaarea56.org" },
+        { "role": "Archives", "name": "Martin M", "email": "Archives@aaarea56.org" },
+        { "role": "Group Services", "name": "Brooke D", "email": "GroupServices@aaarea56.org" },
+        { "role": "Finance", "name": "Spencer G", "email": "Finance@aaarea56.org" },
+        { "role": "Communications", "name": "Dan M", "email": "Communications@aaarea56.org" },
+        { "role": "Hospitality", "name": "Shayna B", "email": "Hospitality@aaarea56.org" },
+        { "role": "Outreach", "name": "", "email": "Outreach@aaarea56.org" }
+      ]
+    },
+    {
+      "name": "District Committee Members",
+      "members": [
+        { "role": "Districts 1–10", "name": "April W", "email": "D1-10dcm@aaarea56.org" },
+        { "role": "District 11", "name": "Martin M", "email": "D11dcm@aaarea56.org" },
+        { "role": "District 12", "name": "Dwayne S", "email": "D12dcm@aaarea56.org" },
+        { "role": "District 13", "name": "Brian", "email": "D13dcm@aaarea56.org" },
+        { "role": "District 14", "name": "Dan M", "email": "D14dcm@aaarea56.org" },
+        { "role": "District 15", "name": "", "email": "D15dcm@aaarea56.org" },
+        { "role": "District 16", "name": "", "email": "D16dcm@aaarea56.org" },
+        { "role": "District 17", "name": "", "email": "D17dcm@aaarea56.org" },
+        { "role": "District 18", "name": "", "email": "D18dcm@aaarea56.org" },
+        { "role": "District 19", "name": "", "email": "D19dcm@aaarea56.org" },
+        { "role": "District 20", "name": "", "email": "D20dcm@aaarea56.org" },
+        { "role": "District 21", "name": "Tony C", "email": "D21dcm@aaarea56.org" },
+        { "role": "District 22", "name": "Katt M", "email": "D22dcm@aaarea56.org" },
+        { "role": "District 23", "name": "Brad R", "email": "D23dcm@aaarea56.org" },
+        { "role": "District 24", "name": "", "email": "D24dcm@aaarea56.org" },
+        { "role": "District 25", "name": "Michael L", "email": "D25dcm@aaarea56.org" },
+        { "role": "District 26", "name": "", "email": "D26dcm@aaarea56.org" },
+        { "role": "District 27", "name": "Chris S", "email": "D27dcm@aaarea56.org" },
+        { "role": "District 28", "name": "Roger T", "email": "d28dcm@aaarea56.org" }
+      ]
+    }
+  ]
+}

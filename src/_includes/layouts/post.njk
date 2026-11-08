@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+---
+<article class="post">
+  <p class="eyebrow"><a href="/announcements/">Announcements</a> · <time datetime="{{ page.date | isoDate }}">{{ page.date | readableDate }}</time></p>
+  <h1>{{ title }}</h1>
+  {% if flyer %}
+  <figure class="flyer">
+    <a href="{{ flyer }}"><img src="{{ flyer }}" alt="{{ flyer_description or ('Flyer: ' + title) }}"></a>
+  </figure>
+  {% endif %}
+  <div class="prose">{{ content | safe }}</div>
+  {% if link_url %}<p><a class="button" href="{{ link_url }}">{{ link_label or "Learn more" }}</a></p>{% endif %}
+</article>

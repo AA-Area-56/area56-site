@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+---
+<article class="post">
+  <p class="eyebrow"><a href="/delegates-corner/">Delegate's Corner</a> · {{ page.date | monthYear }}</p>
+  <h1>{{ title }}</h1>
+  <div class="dc-detail">
+    {% if image %}<img class="dc-image" src="{{ image }}" alt="">{% endif %}
+    <div>
+      <div class="prose">{{ content | safe }}</div>
+      {% if pdf %}<p><a class="button" href="{{ pdf }}">Read this month's letter (PDF)</a></p>{% endif %}
+    </div>
+  </div>
+</article>

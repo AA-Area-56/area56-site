@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+title: Mini-Conference
+permalink: /mini-conference/
+---
+<h1>Area 56 Mini-Conference</h1>
+<p class="lede">Each year before the General Service Conference, Area 56 gathers to discuss the Conference agenda items and give our Delegate the Area's group conscience.</p>
+<ul class="dc-list">
+  {% for c in collections.conferences %}
+  <li><a href="{{ c.url }}"><span class="dc-month">{{ c.data.year }}</span><span class="dc-title">{{ c.data.title }}</span></a></li>
+  {% endfor %}
+</ul>

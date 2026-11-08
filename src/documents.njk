@@ -1,0 +1,26 @@
+---
+layout: layouts/base.njk
+title: Documents
+permalink: /documents/
+---
+<h1>Documents</h1>
+<p class="lede">Minutes, reports, forms, and service literature for Area 56 trusted servants and G.S.R.s.</p>
+{% set categories = ["Minutes", "Reports", "Forms", "Policies and guidelines", "Service literature"] %}
+{% for cat in categories %}
+  {% set docs = [] %}
+  {% for d in collections.documents %}{% if d.data.category == cat %}{% set docs = (docs.push(d), docs) %}{% endif %}{% endfor %}
+  {% if docs.length %}
+  <section class="doc-section">
+    <h2>{{ cat }}</h2>
+    <ul class="doc-list">
+      {% for d in docs %}
+      <li>
+        <a href="{{ d.data.file or d.data.link_url }}">{{ d.data.title }}</a>
+        <span class="doc-meta">{% if d.data.file %}PDF{% else %}Link{% endif %}{% if d.data.show_date %} · {{ d.date | readableDate }}{% endif %}</span>
+        {% if d.content | striptags | trim %}<div class="doc-desc">{{ d.content | safe }}</div>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+{% endfor %}

@@ -1,0 +1,4 @@
+{
+  "layout": "layouts/delegate.njk",
+  "permalink": "/delegates-corner/{{ page.fileSlug }}/"
+}
