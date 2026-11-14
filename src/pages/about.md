@@ -1,13 +1,14 @@
 ---
-title: "About Area 56"
+title: About Area 56
 ---
-
 ## The Area
 
 - [Area 56 Mission Statement](/walking-with-purpose-march-2020-area-56-mission-statement/)
 - [Interactive Area Map with Districts](/area-56-map-with-districts/)
 - [District Boundaries](/district-boundaries/)
 - [Fiscal Policy](/fiscal-policy/)
+
+Hey its me, Chris
 
 ## Standing committees
 
@@ -25,3 +26,4 @@ title: "About Area 56"
 
 - [Helpful Links](/helpful-links/)
 - [Map of Areas in US & Canada](/area-map-of-us-canada/)
+
