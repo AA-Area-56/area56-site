@@ -32,8 +32,12 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - id: pages
+        uses: actions/configure-pages@v5
+      # base_path is "/area56-site" on the github.io URL, "" once a custom domain is set
       - run: npm run build
-      - uses: actions/configure-pages@v5
+        env:
+          PATH_PREFIX: ${{ steps.pages.outputs.base_path }}/
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _site

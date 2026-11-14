@@ -1,4 +1,11 @@
+import { HtmlBasePlugin } from "@11ty/eleventy";
+
 export default function (eleventyConfig) {
+  // Rewrites root-relative URLs (/css/..., /announcements/) to include the
+  // path prefix, so the site works when served from a subpath like
+  // https://aa-area-56.github.io/area56-site/
+  eleventyConfig.addPlugin(HtmlBasePlugin);
+
   eleventyConfig.addPassthroughCopy({ "src/css": "css" });
   eleventyConfig.addPassthroughCopy({ "src/js": "js" });
   eleventyConfig.addPassthroughCopy({ "src/uploads": "uploads" });
@@ -36,6 +43,7 @@ export default function (eleventyConfig) {
   );
 
   return {
+    pathPrefix: process.env.PATH_PREFIX || "/",
     dir: { input: "src", includes: "_includes", data: "_data", output: "_site" },
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
