@@ -1,4 +1,5 @@
 node_modules/
 _site/
 migration/
+*.WordPress.*.xml
 .DS_Store

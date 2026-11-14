@@ -1,0 +1,25 @@
+---
+title: "Is Your Group Listed With G.S.O.?"
+---
+
+**_Box 459_ August/September 2006 Issue**
+
+http://www.aa.org/en\_pdfs/en\_box459\_aug-sept06.pdf
+
+A.A. “has been called an upside-down organization because the groups are on top and the trustees on the bottom” of the service structure. Singly, each of the nearly 61,000 groups in the United States and Canada is autonomous. Yet paradoxically, when linked together all these groups “hold ultimate responsibility and final authority for our world services.” (The A.A. Service Manual, p. S15) However, the only way for them to become connected and act as an effective conscience for all of A.A. is, first of all, to make themselves known to the U.S./Canada General Service Office (G.S.O.) in New York City. Each and every group listed creates a ripple effect that helps build a rich storehouse of collective experience and bolsters A.A. unity and strength.
+
+Some groups, especially new ones, who want to be listed with G.S.O., are confused about how, why and where to do so. They also ask: Does it cost anything? Isn’t giving information to Intergroup enough? And, importantly, how does being listed benefit our group, not to mention all of A.A.? Here are some commonly asked questions and answers, adapted mainly from the G.S.O. service piece “Is Your Group Linked to A.A. as a Whole?”
+
+**_How does a group list itself with G.S.O.?_** The group simply fills out the “Alcoholics Anonymous New Group Form,” available from G.S.O. either via mail or Web site ([www.aa.org](http://www.aa.org/)). Groups listed have either General Service Representatives (G.S.R.s) or “group contacts,” who act as channels for two-way information and shared experience at the group, district, area and national levels. Once a group is listed with G.S.O., it is important that the same information be shared with the area assembly, via the delegate. Sometimes group information is first given to the area, which in turn shares it with G.S.O. Either way has been shown to work well.
+
+When G.S.O. receives a completed “New Group Form,” it forwards a copy to the area delegate, who then communicates the good news to the District Committee Member (D.C.M.) and area registrar, or secretary. 
+
+**_What happens when group information changes?_** It is important to notify G.S.O. whenever changes in group information occur—say, when a group moves to a new location, there’s a change in meeting dates or time, or new group officers rotate in. For this purpose G.S.O. provides an “Alcoholics Anonymous Group Information Change Form,” again either by mail or online as with the “New Group Form.” It is wise, too, to give any changes to the area registrar, or secretary, and to the D.C.M.
+
+**_How does the group benefit?_** Once listed, a group automatically becomes part of the group conscience of A.A. in the U.S./Canada. Its consensus on important matters of policy is shared by the G.S.R. at district meetings and area assemblies. During the annual General Service Conference, when elected delegates from around the U.S./Canada meet to formulate Advisory Actions that will guide A.A. for years to come, groups are represented by their area delegates, elected at the general assembly. Listed groups also are included in the confidential domestic directories, published yearly by G.S.O., which provide contact information for traveling A.A. members looking for a meeting or simply another member with whom to share.
+
+A newly listed group is assigned an identifying service number, or ID, which is unique to that group. It is sent a “Group Handbook” (through the G.S.R., or group contact), and is included in various other mailings. All listed groups receive, among other material sent free of charge, A.A.’s bimonthly newsletter Box 4-5-9, available in English, French and Spanish, which keeps members informed on news of A.A. at home and worldwide and provides a calendar of Regional Forums and others A.A. events held throughout the U.S./Canada. Additionally, the G.S.R.s or group contacts receive advance information and registration details about A.A.’s International Conventions, held every five years.
+
+**_What does it cost a group to be listed with G.S.O.?_** Nothing. As the A.A. Preamble states in part, “There are no dues or fees for A.A. membership; we are self-supporting through our own contributions.” Numerous groups follow the “60-30-10 Plan,” finding it useful as a guide in apportioning their contributions: 60 percent to the local intergroup of central office, 30 percent to G.S.O., and 10 percent to the local area general service committee. But such decisions are determined entirely by the individual group conscience.
+
+**_Isn’t being listed with Intergroup enough?_** No. Although A.A. and U.S./Canada intergroup/central offices work hand-in-glove to carry the A.A. message, they are local entities that function separately from the A.A. service structure (except in Chicago, where the area service office and area committee are essentially one). Many groups choose to be listed with both.

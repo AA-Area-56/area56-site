@@ -45,11 +45,14 @@ At rotation, the outgoing trusted servant hands over the role email. The incomin
 
 ## Moving content from WordPress
 
-`scripts/migrate-from-wordpress.mjs` reads every post, page, and media file from the old site's REST API. It writes them to `migration/` as Markdown and downloads the files to `src/uploads/wp/`. It doesn't touch anything else in `src/`, so you can review what came over and move what's worth keeping into the right folder.
+`scripts/migrate-from-wordpress.mjs` reads a WordPress export file (in WordPress, **Tools → Export → All content**). It writes published posts, pages, and calendar events to `migration/` as Markdown and downloads the site's uploaded files to `src/uploads/wp/`. It doesn't touch anything else in `src/`, so you can review what came over and move what's worth keeping into the right folder. `migration/report.json` lists any failed downloads and the pages a person should compare by hand.
+
+The export also holds drafts, private posts, and author emails, so `.gitignore` keeps it out of the repo. Save it in the project folder or pass its path:
 
 ```sh
-npm run migrate                 # from https://aaarea56.org
-npm run migrate -- --no-media   # Markdown only, skip downloads
+npm run migrate                       # newest *.WordPress.*.xml in this folder
+npm run migrate -- path/to/export.xml
+npm run migrate -- --no-media         # Markdown only, skip downloads
 ```
 
-The prototype content (announcements, Delegate's Corner, documents, Mini-Conference) still links to images and PDFs on the old site. After the migration, change those links to `/uploads/wp/...`. The old site has to stay up until that's done.
+Everything in `src/uploads/` gets published, and the script downloads the whole media library, including files nothing links to. Before committing, keep only the files the site uses in `src/uploads/wp/`, and check them for names or contact details. Files you don't need can go in `migration/`, which Git ignores.
